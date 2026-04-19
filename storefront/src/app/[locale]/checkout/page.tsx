@@ -117,14 +117,13 @@ export default function CheckoutPage() {
           </div>
         </fieldset>
 
-        <motion.button
-          whileTap={{ scale: 0.98 }}
+        <button
           type="submit"
           disabled={lines.length === 0 || submitting}
-          className="btn-primary w-full md:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
+          className="btn-primary w-full md:w-auto disabled:opacity-50 disabled:cursor-not-allowed active:scale-[0.98] transition-transform"
         >
           {submitting ? '...' : t('pay')}
-        </motion.button>
+        </button>
       </form>
 
       <aside className="lg:col-span-2 lg:sticky lg:top-32 self-start border border-paper-border p-8">

@@ -8,6 +8,10 @@ const nextConfig = {
   // Lint runs via `npm run lint` locally / in CI — don't let stylistic
   // rules block production deploys on Vercel.
   eslint: { ignoreDuringBuilds: true },
+  // Same for types — `npm run typecheck` is the enforcement point.
+  // Prevents third-party type regressions (e.g. framer-motion under
+  // React 19) from blocking a deploy.
+  typescript: { ignoreBuildErrors: true },
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'images.unsplash.com' },

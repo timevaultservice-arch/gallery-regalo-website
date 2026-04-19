@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Next.js
+.next/
+out/
+
+# Env files (never commit secrets)
+.env
+.env.local
+.env*.local
+.env.production
+
+# Build artifacts
+*.tsbuildinfo
+dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Vercel
+.vercel
+
+# Medusa backend (bootstrapped locally via create-medusa-app, not committed here)
+backend/node_modules/
+backend/.medusa/
+backend/dist/

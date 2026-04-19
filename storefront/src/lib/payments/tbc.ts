@@ -54,7 +54,5 @@ export async function createTbcPayment(order: OrderInput, amountGel: number): Pr
   throw new Error('TBC live integration not yet implemented.');
 }
 
-export async function verifyTbcCallback(payload: unknown): Promise<{ externalOrderId: string; status: 'paid' | 'failed' | 'pending' }> {
-  void payload;
-  throw new Error('TBC callback verification not yet implemented.');
-}
+// verifyTbcCallback() — to be implemented when real TBC credentials arrive.
+// Will parse the signed callback payload and return { externalOrderId, status }.

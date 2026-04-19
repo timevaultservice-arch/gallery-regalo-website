@@ -49,7 +49,5 @@ export async function createBogPayment(order: OrderInput, amountGel: number): Pr
   throw new Error('BOG live integration not yet implemented.');
 }
 
-export async function verifyBogCallback(payload: unknown): Promise<{ externalOrderId: string; status: 'paid' | 'failed' | 'pending' }> {
-  void payload;
-  throw new Error('BOG callback verification not yet implemented.');
-}
+// verifyBogCallback() — to be implemented when real BOG credentials arrive.
+// Will parse the signed callback payload and return { externalOrderId, status }.
